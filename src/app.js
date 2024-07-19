@@ -30,5 +30,10 @@ app.use(express.urlencoded({ extended: true }));
 // Use the express.static middleware to serve static files from the 'public' directory
 app.use(express.static('public'));
 
+// Import the routes module
+import InquiryRouter from './routes/inquiry.routes.js';
+
+// Declaring the routes
+app.use('/api/v1/inquiry', InquiryRouter);
 // Export the app instance as the default export of the module
 export default app;
