@@ -6,7 +6,7 @@ import ApiResponse from "../utils/apiResponse.js";
 const getAllInquiries = async (req, res) => {
   try {
     const inquiries = await Inquiry.find();
-    if (inquiries) {
+    if (inquiries.length > 0) {
       res.status(200).json(new ApiResponse(200, "Inquiries retrieved successfully", inquiries));
     } else {
       res.status(404).json(new ApiResponse(404, "Inquiries not found"));
