@@ -32,8 +32,10 @@ app.use(express.static('public'));
 
 // Import the routes module
 import InquiryRouter from './routes/inquiry.routes.js';
+import CourseRouter from './routes/course.routes.js';
 
 // Declaring the routes
 app.use('/api/v1/inquiry', InquiryRouter);
+app.use('/api/v1/course', CourseRouter);
 // Export the app instance as the default export of the module
 export default app;
