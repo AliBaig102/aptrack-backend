@@ -33,9 +33,17 @@ app.use(express.static('public'));
 // Import the routes module
 import InquiryRouter from './routes/inquiry.routes.js';
 import CourseRouter from './routes/course.routes.js';
+import BatchRouter from './routes/batch.routes.js';
+import SemesterRouter from './routes/semester.routes.js';
+import ModuleRouter from './routes/module.routes.js';
+import SessionRouter from './routes/session.routes.js';
 
 // Declaring the routes
 app.use('/api/v1/inquiry', InquiryRouter);
 app.use('/api/v1/course', CourseRouter);
+app.use('/api/v1/batch', BatchRouter);
+app.use('/api/v1/semester', SemesterRouter);
+app.use('/api/v1/module', ModuleRouter);
+app.use('/api/v1/session', SessionRouter);
 // Export the app instance as the default export of the module
 export default app;
